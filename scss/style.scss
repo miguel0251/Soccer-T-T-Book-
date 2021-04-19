@@ -1,0 +1,69 @@
+$primary: #3292a6;
+$primary-overlay: rgb(50,146,166);//red, green, blue
+
+body{
+   margin-top: 100px;
+}
+
+.navbar{
+   box-shadow: 2px 2px 5px $primary;
+   opacity: 0.9;
+   background: #fff;
+
+   .nav-item{
+      font-size: 1.4rem;
+      padding-right: 4rem;
+   }
+}
+
+#showcase{
+   position: relative;
+   background: url(../img/willian-justen-de-vasconcellos-cdWjBaLnpPU-unsplash.jpg);
+   min-height: 600px;
+
+   .primary-overlay{
+      background: $primary-overlay;//re-use variable for the background
+      position:absolute;// .primary-overlay is the child element of showcase; use absolute to cover all
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+   }
+}
+
+.info-header{
+   width: 50%;
+   margin: auto;
+   border-bottom: 1px #ddd solid;
+}
+
+#authors{
+   img{
+      margin: -50px;
+   }
+
+   .card:hover{
+      background: $primary;
+      color: #fff;
+   }
+
+   .fab{
+      color: #fff;
+   }
+}
+
+
+
+@media(max-width: 768px){  //when less than 768px turn to 500px and h1 to 4rem
+   #showcase{
+      min-height: 500px;
+
+      h1{
+         font-size: 4rem;
+      }
+   }
+
+   .mb-resp{
+      margin-bottom: 1rem;//margin bottom responsive for small screens
+   }
+}
